@@ -22,7 +22,7 @@
 ```
       - Tab Network cho thấy thông tin trình duyệt gửi đi và response từ server
       - Status Code của request đầu tiên: 200
-      - Tổng thời gian load trang: 1.97s
+      - Tổng thời gian load trang: 1.94s
       - Một request trả về file CSS: svg-with-js.css
       (tham khảo: 01_introduction_html_universe.md + 1.2)
 ```
@@ -95,3 +95,25 @@ Giải thích:
 ```
 
 ---
+
+### Bài B3 (15đ) — Debug HTML
+
+```
+Lỗi 1: Dòng 1 — Khai báo DOCTYPE thiếu — Sửa: <!DOCTYPE html>
+Lỗi 2: Dòng 2 — Thẻ <html> thiếu thuộc tính lang — Sửa: <html lang="vi">
+Lỗi 3: Dòng 4 — Thẻ <title> thiếu thẻ đóng — Sửa: <title>Trang web</title>
+Lỗi 4: Dòng 5 — Giá trị charset sai chính tả — Sửa: <meta charset="UTF-8">
+Lỗi 5: Trong thẻ <head> - Thiếu thẻ <meta chứa thuộc tính về viewport - Sửa: thêm "<meta name="viewport" content="width=device-width, initial-scale=1.0" />"
+Lỗi 6: Dòng 8 — Thẻ <h1> thiếu thẻ đóng và nên đặt trong <header> thay vì trước — Sửa: chuyển vào trong <header> và sửa thành <h1>Welcome to ShopTLU</h1>
+Lỗi 7: Dòng 12 — Thẻ <a> đầu tiên thiếu thẻ đóng và href="home" không hợp lệ — Sửa: <a href="#">Trang chủ</a>
+Lỗi 8: Dòng 13 — href="products" không hợp lệ — Sửa: <a href="products.html">Sản phẩm</a>
+Lỗi 9: Dòng 18 — Nội dung sản phẩm trong <main> nên được bọc bằng <article> vì là nội dung độc lập — Sửa: bọc toàn bộ section sản phẩm trong <article>
+Lỗi 10: Dòng 20 — Thẻ <img> thiếu dấu ngoặc kép ở src và thiếu thuộc tính alt — Sửa: <img src="iphone.jpg" alt="iPhone 16 Pro">
+Lỗi 11: Dòng 20 — Thẻ <img> không được đặt trong <figure> — Sửa: <figure><img src="iphone.jpg" alt="iPhone 16 Pro"></figure>
+Lỗi 12: Dòng 22 — Thẻ <b> và </p> lồng sai thứ tự — Sửa: <p>Giá: <b>25.990.000đ</b></p>
+Lỗi 13: Dòng 27 — Thẻ <table> thiếu <thead> và <tbody> để phân biệt các phần — Sửa: bọc hàng đầu trong <thead> và hàng hai trong <tbody>
+Lỗi 14: Dòng 29,30 — Hàng tiêu đề dùng <td> thay vì <th> — Sửa: đổi thành <th>Tên</th> và <th>Giá</th>
+Lỗi 15: Dòng 40 — Dùng thẻ <main> cho nội dung phụ— Sửa: thay bằng <aside>
+Lỗi 16: Dòng 45 — Thẻ <p> trong <footer> thiếu thẻ đóng và thiếu nội dung — Sửa: <p>&copy; Copyright 2026</p>
+Lỗi 17: Dòng 48 — Toàn bộ tài liệu thiếu thẻ đóng </html> — Sửa: thêm </html> ở cuối file
+```
