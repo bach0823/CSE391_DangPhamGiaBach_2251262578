@@ -155,3 +155,13 @@ Sử dụng DevTools (F12):
 ```
 
 ![tab Element](./screenshots/Screenshot_Bai_B4_3.png)
+
+### Câu C1 (10đ) — Thiết kế cấu trúc
+
+```
+Đã làm trên iphone16pro.html
+```
+
+### Câu C2 (10đ) — So sánh & Tranh luận
+
+Theo tôi thấy, semantic HTML thực ra không khó nhớ,tên thẻ bám sát vai trò của nó luôn, đọc là hiểu ngay. Nhưng để nói rõ vì sao cần học thì lý do chính là Google sẽ không đọc class để hiểu cấu trúc của trang web, khi Google không hiểu cấu trúc của trang web, thì SEO sẽ kém đi, trang web sẽ vô hình với internet, người dùng sẽ khó tiếp cận trang web. Ngoài ra, hiểu được cấu trúc trang còn giúp trình duyệt hỗ trợ người bị khiếm khuyết tốt hơn. Chẳng hạn, phần mềm đọc màn hình dựa vào thẻ semantic để biết trang web này dùng ngôn ngữ nào để đọc cho người mù. Ngoài ra nó cũng dựa vào thẻ semantic để biết thứ tự cần đọc như thế nào, nếu chỉ có thẻ div thì nó sẽ đọc tất cả nhưng rất dễ sai. Tất nhiên thẻ div vẫn rất có ích trong những trường hợp người ta cần div chỉ như một cái khung để căn chỉnh bố cục mà không cần mang ý nghĩa gì cụ thể.

@@ -1,0 +1,153 @@
+<!doctype html>
+<!-- Khai báo cho trình duyệt biết đây là tài liệu HTML5 -->
+<html lang="vi">
+  <!-- lang giúp trình duyệt xác định ngôn ngữ nhằm hỗ trợ người khuyết tật -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <!-- giúp hiển thị tiếng việt-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- giúp hiển thị đúng trên mobile -->
+    <title>iPhone 16 Pro</title>
+    <!-- Hiện trên tab browser + kết quả Google -->
+  </head>
+
+  <body>
+    <!-- chứa toàn bộ nội dung hiển thị của trang -->
+
+    <header>
+      <!-- phần đầu trang, chứa tiêu đề, điều hướng chính -->
+      <h1>iPhone 16 Pro</h1>
+      <!-- cho biết tiêu đề của trang -->
+      <nav aria-label="main-navigation">
+        <!-- nav vì đây là điều hướng , aria-label cho biết đây là điều hướng chính của trang web -->
+        <ul>
+          <!-- ul vì các mục menu không có thứ tự -->
+          <li><a href="#hinh-anh">Hình ảnh</a></li>
+          <li><a href="#thong-tin">Thông tin sản phẩm</a></li>
+          <li><a href="#thong-so">Thông số kỹ thuật</a></li>
+          <li><a href="#danh-gia">Đánh giá</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <nav aria-label="breadcrumb">
+      <!-- nav riêng cho breadcrumb, aria-label nhằm cho biết đây là breadcrumb -->
+      <ol>
+        <!-- ol vì breadcrumb có thứ tự rõ ràng: Trang chủ > Điện thoại > Sản phẩm -->
+        <li><a href="/">Trang chủ</a></li>
+        <!-- href="/" nghĩa là đưa về trang chủ -->
+        <li><a href="/dien-thoai">Điện thoại</a></li>
+        <!-- href="/dien-thoai" nghĩa là đưa về page cha của trang hiện tại-->
+        <li>iPhone 16 Pro</li>
+        <!-- là trang web hiện tại, không dùng <a> vì không điều hướng đi đâu -->
+      </ol>
+    </nav>
+
+    <main>
+      <!-- nội dung chính của trang-->
+
+      <article>
+        <!-- nội dung chi tiết, độc lập, có thể đứng riêng -->
+
+        <section id="hinh-anh">
+          <!-- phân vùng để ảnh trong article -->
+          <h2>Hình ảnh</h2>
+          <figure>
+            <!-- figure bọc nhóm ảnh minh hoạ và nội dung -->
+            <ol>
+              <!-- ol vì các thumbnail có thứ tự hiển thị -->
+              <li><img src="iphone-1.jpg" alt="iPhone 16 Pro 1" /></li>
+              <li><img src="iphone-2.jpg" alt="iPhone 16 Pro 2" /></li>
+              <li><img src="iphone-3.jpg" alt="iPhone 16 Pro 3" /></li>
+              <li><img src="iphone-4.jpg" alt="iPhone 16 Pro 4" /></li>
+              <li><img src="iphone-5.jpg" alt="iPhone 16 Pro 5" /></li>
+            </ol>
+            <figcaption>Ảnh sản phẩm iPhone 16 Pro</figcaption>
+            <!-- figcaption mô tả cho toàn bộ nhóm ảnh trong figure -->
+          </figure>
+        </section>
+
+        <section id="thong-tin">
+          <h2>Thông tin sản phẩm</h2>
+          <p>
+            iPhone 16 Pro với chip A18 Pro, trải nghiệm tuyệt đỉnh. iPhone 16
+            Pro ⭐⭐⭐⭐⭐(12 đánh giá) <br />
+            <strong>Giá: </strong> 25.990.000VNĐ <br />
+            <!-- dùng <br /> để xuống dòng -->
+          </p>
+          <!-- đặt thông tin sản phẩm vào cùng một thẻ <p>-->
+        </section>
+
+        <section id="thong-so">
+          <h2>Thông số kỹ thuật</h2>
+
+          <table>
+            <!-- table vì dữ liệu có cấu trúc hàng-cột rõ ràng -->
+            <thead>
+              <!-- thead phân tách hàng tiêu đề với phần dữ liệu -->
+              <tr>
+                <!-- tr là một hàng trong bảng -->
+                <th>Thông số</th>
+                <!-- th khi đây là ô nằm trong thead -->
+                <th>Chi tiết</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- tbody chứa các hàng dữ liệu chính -->
+              <tr>
+                <!-- tr là một hàng trong bảng -->
+                <th>Thông tin 1</th>
+                <td>Thông số 1</td>
+              </tr>
+              <tr>
+                <th>Thông tin 2</th>
+                <td>Thông số 2</td>
+              </tr>
+              <tr>
+                <th>Thông tin 3</th>
+                <td>Thông số 3</td>
+              </tr>
+              <tr>
+                <th>Thông tin 4</th>
+                <td>Thông số 4</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="danh-gia">
+          <h2>Đánh giá</h2>
+          <article>
+            <!-- mỗi đánh giá là article riêng vì có tác giả và nội dung độc lập -->
+            <h3>Nguyễn Văn A</h3>
+            <p>Sản phẩm rất tốt, giao hàng nhanh!</p>
+          </article>
+          <article>
+            <h3>Nguyễn Thị B</h3>
+            <p>Nhân viên thân thiện</p>
+          </article>
+        </section>
+      </article>
+
+      <aside>
+        <!-- aside vì đây là nội dung phụ, liên quan nhưng không thuộc nội dung chính -->
+        <h2>Sản phẩm tương tự</h2>
+        <ul>
+          <!-- ul vì danh sách sản phẩm gợi ý không có thứ tự ưu tiên -->
+          <li>
+            <a href="#"><h3>iPhone 15 Pro</h3></a>
+            <p>22.990.000đ</p>
+          </li>
+          <li>
+            <a href="#"><h3>iPhone 16</h3></a>
+            <p>23.990.000đ</p>
+          </li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer>&copy;Copyright 2026</footer>
+    <!-- phần cuối trang, chứa thông tin bổ sung -->
+  </body>
+</html>
