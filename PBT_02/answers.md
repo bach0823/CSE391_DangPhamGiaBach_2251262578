@@ -73,3 +73,7 @@
    - Ảnh sản phẩm iPhone 16 : alt="iPhone 16 Pro 128GB"
    - Ảnh trang trí (decorative) : alt="" (vì khi để trống, screen reader sẽ hiểu đây là ảnh trang trí và bỏ qua)
    - Ảnh biểu đồ doanh thu Q1/2026 : alt="Doanh thu Q1/2026: Tăng 50% so với cùng kỳ năm ngoài"
+
+### Câu A5 (5đ) — So sánh `<figure>` vs `<img>`
+
+Khi nào dùng Cách 1, khi nào dùng Cách 2? Cho 2 ví dụ thực tế cho mỗi cách. - Dùng cách 1 khi mà chỉ cần một img độc lập là đủ để thể hiện nội dung (VD: ảnh đại diện, logo) - Dùng cách 2 khi cần một cụm gồm ảnh và chú thích (VD: Mục sản phẩm, bưu thiếp)
