@@ -57,3 +57,19 @@
 3. `aria-label` dùng khi nào? Tại sao KHÔNG nên dùng `aria-label` khi đã có `<label>`?
    - `aria-label` dùng khi element không hiển thị nội dung có vài trò label trên màn hình
    - Lý do không nên dùng `aria-label` khi đã có `<label>` vì `<label>` đã đảm nhiệm vài trò của `aria-label` và cũng đã hiển thị nội dung trên màn hình
+
+### Câu A4 (5đ) — Media
+
+1. Giải thích thuộc tính `loading="lazy"` trên thẻ `<img>`. Nó cải thiện gì? Khi nào KHÔNG nên dùng?
+   - Mặc định trình duyệt load tất cả ảnh khi load trang. Còn với loading="lazy", trình duyệt chỉ load ảnh khi người dùng sắp cuộn tới nơi có ảnh đó.
+   - Điều này giúp tối ưu thời gian load trang, giúp giảm tài nguyên không cần thiết.
+   - Tránh dùng khi ảnh đã ở ngay đầu trang.
+2. Tại sao nên cung cấp nhiều `<source>` trong thẻ `<video>`? Liệt kê ít nhất 3 format video web phổ biến.
+   - Có nhiều nguồn phòng trường hợp có nguồn bị hỏng
+   - Hỗ trợ đa nhiều định dạng trong trường hợp trình duyệt không hỗ trợ định dạng ở một vài nguồn
+   - Format phổ biến: MP4, WebM, OGG
+3. Thuộc tính `alt` trên `<img>` dùng để làm gì? Viết `alt` tốt cho 3 trường hợp:
+   - `alt` dùng khi hiển thị text thay thế khi ảnh không load được, hỗ trợ cho người khiếm thính nghe và vì mục đích semantic
+   - Ảnh sản phẩm iPhone 16 : alt="iPhone 16 Pro 128GB"
+   - Ảnh trang trí (decorative) : alt="" (vì khi để trống, screen reader sẽ hiểu đây là ảnh trang trí và bỏ qua)
+   - Ảnh biểu đồ doanh thu Q1/2026 : alt="Doanh thu Q1/2026: Tăng 50% so với cùng kỳ năm ngoài"
