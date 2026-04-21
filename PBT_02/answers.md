@@ -44,3 +44,16 @@
 <!-- User gõ "123" -->
 <!-- độ dài tối thiếu là 8 nhưng ở đây chỉ có 3 -->
 ```
+
+### Câu A3 (5đ) — Accessibility
+
+Đọc phần Accessibility trong chương 07. Giải thích:
+
+1. Tại sao `<label for="email">` quan trọng cho người dùng screen reader?
+   - Giúp cho người dùng biết nên nhập vào ô nhập gì, ngoài ra label cũng kết nối với ô nên nhập vào label thì cũng như nhập vào ô
+2. Khi nào dùng `<fieldset>` + `<legend>`? Cho ví dụ cụ thể.
+   - Dùng khi có các mục nhập liên quan tới nhau
+   - VD: Nhập địa chỉ gồm các mục: số nhà, đường, phường, thành phố
+3. `aria-label` dùng khi nào? Tại sao KHÔNG nên dùng `aria-label` khi đã có `<label>`?
+   - `aria-label` dùng khi element không hiển thị nội dung có vài trò label trên màn hình
+   - Lý do không nên dùng `aria-label` khi đã có `<label>` vì `<label>` đã đảm nhiệm vài trò của `aria-label` và cũng đã hiển thị nội dung trên màn hình
