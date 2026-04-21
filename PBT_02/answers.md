@@ -13,3 +13,34 @@
 10. type="search" → ô tìm kiếm + nút X → thanh tìm kiếm
 (tham khảo: 07_forms_interactive.md)
 ```
+
+### Câu A2 (5đ) — Validation Attributes
+
+Đọc chương 07. Không chạy code, hãy **dự đoán** điều gì xảy ra khi user bấm Submit cho mỗi trường hợp sau. Giải thích TẠI SAO.
+
+```html
+<!-- Trường hợp 1 -->
+<input type="text" required value="" />
+<!-- User để trống -->
+<!-- Bắt buộc phải nhập mới submit được do required -->
+
+<!-- Trường hợp 2 -->
+<input type="email" value="abc" />
+<!-- User gõ "abc" -->
+<!-- nhập sai format nên ko submit được, type email yêu cầu phải có @ -->
+
+<!-- Trường hợp 3 -->
+<input type="number" min="1" max="10" value="15" />
+<!-- User gõ 15 -->
+<!-- nhập giá trị ngoài khoảng cho phép, 15 > max(10) -->
+
+<!-- Trường hợp 4 -->
+<input type="text" pattern="[0-9]{10}" value="abc123" />
+<!-- User gõ "abc123" -->
+<!-- pattern="[0-9]{10}" yêu cầu 10 chữ số => sai format -->
+
+<!-- Trường hợp 5 -->
+<input type="password" minlength="8" value="123" />
+<!-- User gõ "123" -->
+<!-- độ dài tối thiếu là 8 nhưng ở đây chỉ có 3 -->
+```
