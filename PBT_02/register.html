@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng kí tài khoản E-Commerce</title>
+  </head>
+  <body>
+    <main>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Thông tin cá nhân</legend>
+          <div>
+            <label for="ho-ten">Họ tên</label>
+            <input
+              type="text"
+              id="ho-ten"
+              name="ho-ten"
+              required
+              minlength="2"
+              maxlength="50"
+              placeholder="Nguyễn Văn A"
+            />
+          </div>
+          <div>
+            <label for="mail">Email</label>
+            <input
+              type="email"
+              name="mail"
+              id="mail"
+              required
+              placeholder="example@mail.com"
+            />
+          </div>
+          <div>
+            <label for="sdt">Số điện thoại</label>
+            <input
+              type="tel"
+              name="sdt"
+              id="sdt"
+              pattern="[0-9]{10}"
+              placeholder="0000000000"
+            />
+          </div>
+          <div>
+            <label for="dob">Ngày sinh</label>
+            <input
+              type="date"
+              name="dob"
+              id="dob"
+              max="2026-04-22"
+              placeholder="2000-01-01"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Tài khoản</legend>
+          <div>
+            <label for="username">Username</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              pattern="\w{3,20}"
+              placeholder="User_name"
+            />
+          </div>
+          <div>
+            <label for="pass">Password</label>
+            <input
+              type="password"
+              name="pass"
+              id="pass"
+              minlength="8"
+              pattern="(?=.*[0-9])(?=.*[A-Z]).{8,}"
+              required
+              placeholder="PASSW0RD"
+            />
+          </div>
+          <div>
+            <label for="confirm-pass">Xác nhận Password</label>
+            <input
+              type="password"
+              name="confirm-pass"
+              id="confirm-pass"
+              minlength="8"
+              pattern="(?=.*[0-9])(?=.*[A-Z]).{8,}"
+              required
+              placeholder="PASSW0RD"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Thông tin giao hàng</legend>
+          <div>
+            <label for="tp">Thành phố</label>
+            <select name="tp" id="tp">
+              <option value="">-- Chọn thành phố --</option>
+              <option value="hanoi">Hà Nội</option>
+              <option value="saigon">TP. HCM</option>
+              <option value="danang">Đà Nẵng</option>
+              <option value="thanhhoa">Thanh Hóa</option>
+              <option value="haiphong">Hải Phòng</option>
+            </select>
+          </div>
+          <div>
+            <label for="qh">Quận/Huyện</label>
+            <select name="qh" id="qh">
+              <option value="">-- Chọn Quận/Huyện --</option>
+              <optgroup label="Hà Nội">
+                <option value="hoan_kiem">Quận Hoàn Kiếm</option>
+                <option value="ba_dinh">Quận Ba Đình</option>
+                <option value="cau_giay">Quận Cầu Giấy</option>
+              </optgroup>
+              <optgroup label="TP. Hồ Chí Minh">
+                <option value="quan_1">Quận 1</option>
+                <option value="quan_3">Quận 3</option>
+              </optgroup>
+              <optgroup label="Đà Nẵng">
+                <option value="hai_chau">Quận Hải Châu</option>
+                <option value="thanh_khe">Quận Thanh Khê</option>
+              </optgroup>
+              <optgroup label="Hải Phòng">
+                <option value="hong_bang">Quận Hồng Bàng</option>
+                <option value="le_chan">Quận Lê Chân</option>
+              </optgroup>
+              <optgroup label="Thanh Hóa">
+                <option value="tp_thanh_hoa">Thành phố Thanh Hóa</option>
+                <option value="sam_son">Thành phố Sầm Sơn</option>
+              </optgroup>
+            </select>
+          </div>
+          <div>
+            <label for="addrChiTiet">Địa chỉ chi tiết</label>
+            <textarea name="addrChiTiet" id="addrChiTiet" rows="3"></textarea>
+          </div>
+          <fieldset>
+            <legend>Giới tính</legend>
+            <input type="radio" name="gioitinh" id="nam" value="Nam" />
+            <label for="nam">Nam</label>
+            <input type="radio" name="gioitinh" id="nu" value="Nữ" />
+            <label for="nu">Nữ</label>
+            <input type="radio" name="gioitinh" id="other" value="Khác" />
+            <label for="other">Khác</label>
+          </fieldset>
+        </fieldset>
+
+        <div>
+          <input type="checkbox" id="dieukhoan" name="dieukhoan" required />
+          <label for="dieukhoan">Tôi đồng ý với điều khoản sử dụng</label>
+        </div>
+
+        <button type="submit">Đăng ký</button>
+        <button type="reset">Nhập lại</button>
+      </form>
+    </main>
+  </body>
+</html>
