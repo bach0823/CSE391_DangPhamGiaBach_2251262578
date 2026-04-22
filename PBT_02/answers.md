@@ -81,3 +81,51 @@ Khi nào dùng Cách 1, khi nào dùng Cách 2? Cho 2 ví dụ thực tế cho m
 ### Bài B1 (20đ) — Form Đăng ký Tài khoản
 
 Tại sao HTML không thể validate confirm password: vì pattern chỉ nhận một chuỗi regex cố định — nó không có cơ chế nào để tham chiếu đến giá trị của input khác.
+
+### Câu C1 (10đ) — Debug Form
+
+Form dưới đây có **8 lỗi** về validation, accessibility, và best practices. Tìm và sửa tất cả.
+
+```
+Lỗi 1: Dòng 1 — <form> thiếu method và action, vi phạm best practices
+Sửa: <form action="." method="post">
+
+Lỗi 2: Dòng 2 — Input "Tên" không có <label for="...">, thiếu id, name, required, vi phạm accessibility và validation
+Sửa:
+<label for="name">Tên:</label>
+<input type="text" id="name" name="name" required>
+
+Lỗi 3: Dòng 4 — Input "Email" không có <label for="...">, thiếu id, name, required, vi phạm accessibility và validation
+Sửa:
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" placeholder="Email của bạn" required>
+
+Lỗi 4: Dòng 6–7 — Cả 2 input "Password" thiếu <label>, id, name riêng biệt, vi phạm accessibility và best practices
+Sửa:
+<label for="password">Mật khẩu:</label>
+<input type="password" id="password" name="password" required>
+<label for="confirm-password">Nhập lại mật khẩu:</label>
+<input type="password" id="confirm-password" name="confirm_password" required>
+
+Lỗi 5: Dòng 9 — Input "Phone" không có <label for="...">, thiếu id, name, vi phạm accessibility và best practices
+Sửa:
+<label for="phone">Phone:</label>
+<input type="text" id="phone" name="phone" value="0901234567">
+
+Lỗi 6: Dòng 11 — <select> không có <label>, thiếu id, name, các <option> thiếu value, vi phạm accessibility và best practices
+Sửa:
+<label for="city">Địa chỉ:</label>
+<select id="city" name="city">
+    <option value="hanoi">Hà Nội</option>
+    <option value="hcm">TP.HCM</option>
+</select>
+
+Lỗi 7: Dòng 16 — <label> không có <input type="..."> đi kèm, vi phạm accessibility và validation
+Sửa:
+<input type="checkbox" id="agree" name="agree" required>
+<label for="agree">Tôi đồng ý điều khoản</label>
+
+Lỗi 8: Dòng 20 — <input type="submit"> nên dùng <button type="submit">, vi phạm best practices
+Sửa:
+<button type="submit">Xác nhận</button>
+```
