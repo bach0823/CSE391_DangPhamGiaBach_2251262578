@@ -1,3 +1,5 @@
+## PHẦN A — KIỂM TRA ĐỌC HIỂU (25 điểm)
+
 ### Câu A1 (5đ) — Input Types
 
 ```
@@ -78,9 +80,13 @@
 
 Khi nào dùng Cách 1, khi nào dùng Cách 2? Cho 2 ví dụ thực tế cho mỗi cách. - Dùng cách 1 khi mà chỉ cần một img độc lập là đủ để thể hiện nội dung (VD: ảnh đại diện, logo) - Dùng cách 2 khi cần một cụm gồm ảnh và chú thích (VD: Mục sản phẩm, bưu thiếp)
 
+## PHẦN B — THỰC HÀNH CODE (55 điểm)
+
 ### Bài B1 (20đ) — Form Đăng ký Tài khoản
 
 Tại sao HTML không thể validate confirm password: vì pattern chỉ nhận một chuỗi regex cố định — nó không có cơ chế nào để tham chiếu đến giá trị của input khác.
+
+## PHẦN C — PHÂN TÍCH & SUY LUẬN (20 điểm)
 
 ### Câu C1 (10đ) — Debug Form
 
@@ -148,3 +154,7 @@ Sửa:
    - Người dùng dễ dàng bypass validate html
    - Người dùng có thể truyền request thẳng vào máy chủ mà ko cần đi qua html
 ```
+
+## 🎬 PHẦN D — VIDEO THỰC HÀNH OBS (25 điểm)
+
+https://youtu.be/U5SeoaUa-rI
