@@ -129,3 +129,34 @@ Lỗi 8: Dòng 20 — <input type="submit"> nên dùng <button type="submit">, v
 Sửa:
 <button type="submit">Xác nhận</button>
 ```
+
+### Câu C2 (10đ) — Thiết kế chiến lược Validation
+
+Bạn xây dựng form đăng ký cho ngân hàng số. Yêu cầu:
+
+- CMND/CCCD: đúng 12 chữ số
+- Số tài khoản: 10-15 chữ số
+- Email: bắt buộc, đúng format
+- PIN: đúng 6 chữ số, KHÔNG hiển thị
+
+**Câu hỏi:**
+
+1. Viết `pattern` regex cho CMND/CCCD và Số tài khoản
+2. Giải thích: HTML5 validation đủ an toàn cho ứng dụng ngân hàng chưa? Tại sao?
+3. Liệt kê 3 loại validation mà HTML5 **KHÔNG THỂ** làm được (phải dùng JavaScript)
+4. Nêu 2 rủi ro bảo mật nếu chỉ validate trên Frontend mà không validate Backend
+
+```
+1. Pattern:
+   - CMND/CCCD: "\d{12}"
+   - Số tài khoản: "\d{10,15}"
+   - PIN: "/d{6}
+2. HTML5 validation chưa đủ an toàn cho ứng dụng ngân hàng vì:
+   - Người dùng có thể thay đổi code html trên trình duyệt, chẳng hạn như thay đổi pattern khiến trình duyệt gửi thông tin sai, dễ dàng bị bypass
+   - HTML không có đủ năng lực để thực hiện các phép logic phức tạp cần thiết
+3. Những validation mà HTML5 không thể làm:
+   - So sánh hai giá trị
+   - Kiểm tra những logic phức tạp (mã CCCD có hợp lệ theo quy định số thẻ CCCD ko)
+   - HTML không thể biết dữ liệu bạn nhập đã tồn tại trong csdl hay chưa.
+
+```
