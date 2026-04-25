@@ -132,20 +132,6 @@ Sửa:
 
 ### Câu C2 (10đ) — Thiết kế chiến lược Validation
 
-Bạn xây dựng form đăng ký cho ngân hàng số. Yêu cầu:
-
-- CMND/CCCD: đúng 12 chữ số
-- Số tài khoản: 10-15 chữ số
-- Email: bắt buộc, đúng format
-- PIN: đúng 6 chữ số, KHÔNG hiển thị
-
-**Câu hỏi:**
-
-1. Viết `pattern` regex cho CMND/CCCD và Số tài khoản
-2. Giải thích: HTML5 validation đủ an toàn cho ứng dụng ngân hàng chưa? Tại sao?
-3. Liệt kê 3 loại validation mà HTML5 **KHÔNG THỂ** làm được (phải dùng JavaScript)
-4. Nêu 2 rủi ro bảo mật nếu chỉ validate trên Frontend mà không validate Backend
-
 ```
 1. Pattern:
    - CMND/CCCD: "\d{12}"
@@ -158,5 +144,7 @@ Bạn xây dựng form đăng ký cho ngân hàng số. Yêu cầu:
    - So sánh hai giá trị
    - Kiểm tra những logic phức tạp (mã CCCD có hợp lệ theo quy định số thẻ CCCD ko)
    - HTML không thể biết dữ liệu bạn nhập đã tồn tại trong csdl hay chưa.
-
+4. 2 rủi ro bảo mật nếu chỉ validate trên Frontend mà không validate Backend:
+   - Người dùng dễ dàng bypass validate html
+   - Người dùng có thể truyền request thẳng vào máy chủ mà ko cần đi qua html
 ```
