@@ -162,3 +162,33 @@ Cho HTML sau:
 ```
 
 **Nâng cao:** Nếu `.box-a` có `margin-bottom: -10px` và `.box-b` có `margin-top: 40px`, khoảng cách = 30. Vì box-a có margin-bottom âm nên box-b được kéo lên
+
+### Câu A4 (5đ) — Specificity (Độ ưu tiên)
+
+Cho các CSS rules sau cùng target 1 element `<p class="price" id="main-price">`:
+
+```css
+p {
+  color: black;
+} /* Rule A */
+.price {
+  color: blue;
+} /* Rule B */
+#main-price {
+  color: red;
+} /* Rule C */
+p.price {
+  color: green;
+} /* Rule D */
+```
+
+1. Tính specificity score (a, b, c) cho mỗi rule
+   | Selector | A(ID #) | B(Class .) | C(Tag) | Tổng |
+   |---|---|---|---|---|
+   | Rule A| 0 | 0 | 1 | 1 |
+   | Rule B | 0 | 1 | 0 | 10 |
+   | Rule C | 1 | 0 | 0 | 100 |
+   | Rule D | 0 | 1 | 1 | 11 |
+2. Element sẽ có màu `red`, vì Rule C có điểm specificity cao nhất (100)
+3. Nếu thêm `<p class="price" id="main-price" style="color: orange;">`, element sẽ có màu `orange`, vì thẻ <p> đang sử dụng nhúng CSS Inline có 1000+ điểm specificity
+4. Nếu Rule A thêm `!important`, element có màu `black`, vì !important giúp Rule A có vô hạn diểm specificity
