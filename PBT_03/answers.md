@@ -64,3 +64,65 @@ body {
 **Câu hỏi thêm:** Nếu cùng 1 element có cả 3 cách CSS đồng thời áp dụng, cách nào "thắng"? Giải thích tại sao.
 - Nếu không xét trường hợp sử dụng !important. Inline sẽ thắng vì nó có độ ưu tiên cao nhất trong cả 3 cách.
 ```
+
+### Câu A2 (8đ) — CSS Selectors — Dự đoán kết quả
+
+Cho HTML sau:
+
+```html
+<div id="app">
+  <header class="top-bar dark">
+    <h1>ShopTLU</h1>
+    <nav>
+      <a href="/" class="active">Home</a>
+      <a href="/products">Products</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+  <main>
+    <article class="product">
+      <h2>iPhone 16</h2>
+      <p class="price">25.990.000đ</p>
+      <p>Mô tả sản phẩm...</p>
+    </article>
+    <article class="product featured">
+      <h2>MacBook Pro</h2>
+      <p class="price">45.990.000đ</p>
+      <p>Mô tả sản phẩm...</p>
+    </article>
+  </main>
+</div>
+```
+
+**Không chạy code**, cho biết mỗi selector sau chọn được element nào? (Ghi cụ thể text content)
+
+```css
+1. h1
+→ Chọn: <h1>ShopTLU</h1>
+2. .price
+→ Chọn: <p class="price">25.990.000đ</p>; <p class="price">45.990.000đ</p>
+3. #app header
+→ Chọn:
+'''
+<header class="top-bar dark">
+        <h1>ShopTLU</h1>
+        <nav>
+            <a href="/" class="active">Home</a>
+            <a href="/products">Products</a>
+            <a href="/about">About</a>
+        </nav>
+    </header>
+'''
+4. nav a:first-child
+→ Chọn: <a href="/" class="active">Home</a>
+5. .product.featured h2
+→ Chọn: <h2>MacBook Pro</h2>
+6. article > p
+→ Chọn: <p class="price">25.990.000đ</p>; <p>Mô tả sản phẩm...</p>; <p class="price">45.990.000đ</p>; <p>Mô tả sản phẩm...</p>
+7. a[href="/"]
+→ Chọn: <a href="/" class="active">Home</a>
+8. .top-bar.dark h1
+→ Chọn: <h1>ShopTLU</h1>
+```
+
+**Sau khi trả lời**, tạo file `selectors_test.html` để kiểm chứng đáp án. Chụp screenshot.
