@@ -125,4 +125,40 @@ Cho HTML sau:
 → Chọn: <h1>ShopTLU</h1>
 ```
 
-**Sau khi trả lời**, tạo file `selectors_test.html` để kiểm chứng đáp án. Chụp screenshot.
+![kết quả selectors_test.html](./screenshots/Screenshot_Bai_A2.png)
+
+### Câu A3 (7đ) — Box Model — Tính toán kích thước
+
+Đọc chương 11 (Box Model). Tính **kích thước thực tế** (chiều rộng thực tế render trên browser) cho mỗi trường hợp sau:
+
+```css
+/* Trường hợp 1: content-box (mặc định) */
+.box-1 {
+    width: 400px;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 10px;
+}
+→ Chiều rộng hiển thị = 400 + 20*2 + 5*2 = 450px
+→ Không gian chiếm trên trang = 450 + 10*2 = 570px
+
+/* Trường hợp 2: border-box */
+.box-2 {
+    box-sizing: border-box;
+    width: 400px;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 10px;
+}
+→ Chiều rộng hiển thị = 400px
+→ Kích thước content thực tế = 400 - 20*2 - 5*2 = 350px
+→ Không gian chiếm trên trang = 400 + 10*2 = 470px
+
+/* Trường hợp 3: Margin collapse */
+.box-a { margin-bottom: 25px; }
+.box-b { margin-top: 40px; }
+→ Khoảng cách giữa box-a và box-b = max(25,40) = 40px
+→ Giải thích tại sao KHÔNG PHẢI 65px: Vì đây là margin collapse, nên margin dọc giữa 2 block sẽ gộp lại.
+```
+
+**Nâng cao:** Nếu `.box-a` có `margin-bottom: -10px` và `.box-b` có `margin-top: 40px`, khoảng cách = 30. Vì box-a có margin-bottom âm nên box-b được kéo lên
