@@ -214,3 +214,23 @@ Content-box
 ![Content-box](./screenshots/Screenshot_B2_Phan2_content-box.png)  
 Border-box  
 ![Border-box](./screenshots/Screenshot_B2_Phan2_border-box.png)
+
+### Bài B3 (15đ) — Specificity Battle
+
+| Selector                                | Specificity |
+| --------------------------------------- | ----------- |
+| p{ color: aqua;}                        | 0,0,1       |
+| body p { color: red;}                   | 0,0,2       |
+| .text { color: lightblue;}              | 0,1,0       |
+| p.text { color: black;}                 | 0,1,1       |
+| .text.highlight { color: blue;}         | 0,2,0       |
+| p.text.highlight { color: yellowgreen}  | 0,2,1       |
+| p.highlight.text { color: darkgreen}    | 0,2,1       |
+| #demo { color: orange}                  | 1,0,0       |
+| #demo.text { color: mediumspringgreen}  | 1,1,0       |
+| #demo.highlight { color: darkgoldenrod} | 1,1,0       |
+
+1. Liệt kê (Bảng trên)
+2. Element cuối cùng hiển thị màu darkgoldenrod. Tại vì #demo.highlight có điểm Specificity là 1,1,0 là số điểm cao nhât trong các selector (cùng với #demo.text) và #demo.highlight được viết sau #demo.text, nếu có cùng điểm specificity thì selector nào viết sau sẽ thắng.
+3. ![kết quả](./screenshots/Screenshot_Bai_B3.png)
+4. Nếu để #demo.text được viết sau #demo.highlight thì element sẽ hiển thị màu mediumspringgreen. Vì #demo.highlight và #demo.text đều có điểm specificity cao nhất nhưng vì #demo.text được viết sau nên thắng
