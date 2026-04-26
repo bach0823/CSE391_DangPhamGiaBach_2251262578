@@ -192,3 +192,25 @@ p.price {
 2. Element sẽ có màu `red`, vì Rule C có điểm specificity cao nhất (100)
 3. Nếu thêm `<p class="price" id="main-price" style="color: orange;">`, element sẽ có màu `orange`, vì thẻ <p> đang sử dụng nhúng CSS Inline có 1000+ điểm specificity
 4. Nếu Rule A thêm `!important`, element có màu `black`, vì !important giúp Rule A có vô hạn diểm specificity
+
+## PHẦN B — THỰC HÀNH CODE (55 điểm)
+
+### Bài B2 (20đ) — Box Model Lab
+
+**Phần 1 — Chứng minh content-box vs border-box (10đ):**  
+Hộp 1  
+![Hộp 1](./screenshots/Screenshot_B2_Phan1_Hop1.png)  
+Hộp 2  
+![Hộp 2](./screenshots/Screenshot_B2_Phan1_Hop2.png)  
+Hộp 1 (content-box): chiều rộng thực tế = 349.6 px (đo từ DevTools)  
+Hộp 2 (border-box): chiều rộng thực tế = 300 px (đo từ DevTools)  
+Giải thích:
+
+- Với content-box, width chỉ apply cho content area => Padding và border "phình ra ngoài" khi thêm vào => width thực tế thay đổi
+- Với border-box, width sẽ bao gồm từ border vào trong (border,padding,content) => thêm padding,border thì content bé lại => width thực tế không đổi
+
+**Phần 2 — Layout 3 cột (10đ):**  
+Content-box  
+![Content-box](./screenshots/Screenshot_B2_Phan2_content-box.png)  
+Border-box  
+![Border-box](./screenshots/Screenshot_B2_Phan2_border-box.png)
