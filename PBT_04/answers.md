@@ -89,3 +89,14 @@ mỗi hàng chỉ có 3 chỗ nhưng có tổng 7 item nên khi hàng có đủ 
 ```
 
 ---
+
+## PHẦN B — THỰC HÀNH CODE (60 điểm)
+
+### Bài B1 (15đ) — Positioning Playground
+
+Screenshot:
+
+- Trạng thái header khi scroll (chứng minh header fixed)
+- Trạng thái sidebar khi scroll (chứng minh sticky)
+- Badge trên card  
+  ![](./screenshots/Screenshot_B1.png)
