@@ -234,3 +234,61 @@ Border-box
 2. Element cuối cùng hiển thị màu darkgoldenrod. Tại vì #demo.highlight có điểm Specificity là 1,1,0 là số điểm cao nhât trong các selector (cùng với #demo.text) và #demo.highlight được viết sau #demo.text, nếu có cùng điểm specificity thì selector nào viết sau sẽ thắng.
 3. ![kết quả](./screenshots/Screenshot_Bai_B3.png)
 4. Nếu để #demo.text được viết sau #demo.highlight thì element sẽ hiển thị màu mediumspringgreen. Vì #demo.highlight và #demo.text đều có điểm specificity cao nhất nhưng vì #demo.text được viết sau nên thắng
+
+## PHẦN C — DEBUG & SUY LUẬN (20 điểm)
+
+### Câu C1 (10đ) — Debug CSS Layout
+
+1. Tính chiều rộng **thực tế** của sidebar và content (content-box!)  
+   sidebar: 300 + 20*2 + 2 = 342px
+   content: 660 + 30*2 + 2 = 722px
+2. Giải thích tại sao layout bị vỡ: bởi vì tổng chiều rộng thực tế của sidebar và content lớn hơn chiều rộng của container.
+3. Đưa ra **2 cách sửa** khác nhau (1 cách dùng border-box, 1 cách không dùng) (xem trong `debug_layout.css`)
+4. Tạo file `debug_layout.html` + `debug_layout.css` chứng minh cả 2 cách sửa hoạt động: Cả hai cách đều cho kết quả đều cho thấy sidebar và content đều nằm cùng hàng và width đo được của cẩ hai ở cả hai trường hợp đều là 960px
+
+### Câu C2 (10đ) — Cascade Puzzle
+
+1. "Sản phẩm A" (h2) có `font-size` = 20px vì .card .title { font-size: 20px; } có ưu tiên các nhất trong các selector trỏ tới và `color` = `green` vì "Sản phẩm A" có class `highlight` có `color` dùng `!important`
+
+| Selector                                | Specificity |
+| --------------------------------------- | ----------- |
+| body { font-size: 16px; color: #333; }  | 0,0,1       |
+| .container { font-size: 14px; }         | 0,1,0       |
+| .card { color: blue; }                  | 0,1,0       |
+| .card .title { font-size: 20px; }       | 0,2,0       |
+| #featured .title { color: red; }        | 1,1,0       |
+| .highlight { color: green !important; } | ♾️,1,0      |
+
+2. "Mô tả sản phẩm" (p trong card featured) có `color` = `blue` vì .card p { color: inherit; } có ưu tiên các nhất trong các selector trỏ tới nên color sẽ được thừa hưởng từ cha là .card mà .card { color: blue; }
+
+| Selector                               | Specificity |
+| -------------------------------------- | ----------- |
+| body { font-size: 16px; color: #333; } | 0,0,1       |
+| .container { font-size: 14px; }        | 0,1,0       |
+| .card { color: blue; }                 | 0,1,0       |
+| .card p { color: inherit; }            | 0,1,1       |
+
+3. "Sản phẩm B" (h2) có `font-size` = `20px` vì .card .title { font-size: 20px; } có ưu tiên các nhất trong các selector trỏ tới và `color` = `blue` vì .card { color: blue; } là cha của "Sản phẩm 2" mà "Sản phẩm 2" không có định nghĩa về color nên sẽ kế thừa từ cha theo mặc định.
+
+| Selector                               | Specificity |
+| -------------------------------------- | ----------- |
+| body { font-size: 16px; color: #333; } | 0,0,1       |
+| .container { font-size: 14px; }        | 0,1,0       |
+| .card { color: blue; }                 | 0,1,0       |
+| .card .title { font-size: 20px; }      | 0,2,0       |
+
+4. "Mô tả sản phẩm B" (p.highlight) có `color` = `green` vì có class `highlight` có `color` dùng `!important`
+
+| Selector                                | Specificity |
+| --------------------------------------- | ----------- |
+| body { font-size: 16px; color: #333; }  | 0,0,1       |
+| .container { font-size: 14px; }         | 0,1,0       |
+| .card { color: blue; }                  | 0,1,0       |
+| .card p { color: inherit; }             | 0,1,1       |
+| .highlight { color: green !important; } | ♾️,1,0      |
+
+file: CascadePuzzle.html và CascadePuzzle.css  
+Screenshot:  
+![kết quả](./screenshots/Screenshot_C2.png)
+
+---
