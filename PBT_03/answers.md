@@ -292,3 +292,7 @@ Screenshot:
 ![kết quả](./screenshots/Screenshot_C2.png)
 
 ---
+
+## 🎬 PHẦN D — VIDEO THỰC HÀNH OBS (25 điểm)
+
+link: https://youtu.be/h4nD_-bs8gE
