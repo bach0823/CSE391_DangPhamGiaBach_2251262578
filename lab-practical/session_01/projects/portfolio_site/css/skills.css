@@ -3,9 +3,6 @@
   background: var(--color-light);
 }
 
-#skills .container {
-}
-
 #skills .container h2 {
   text-align: center;
   margin-bottom: 32px;
@@ -34,15 +31,11 @@
   margin: 0 auto;
 }
 
-.skill-name {
-}
-
 /* skill-bar */
 .skill-bar {
   background-color: var(--color-bar-track);
   height: 12px;
   border-radius: 6px;
-  /* overflow: hidden; */
   margin-top: 16px;
 }
 .skill-progress {
@@ -52,7 +45,7 @@
     var(--color-secondary)
   );
   border-radius: 6px;
-  height: 12px;
+  height: 100%;
   animation: width 3s ease-out infinite;
 }
 .skill-progress::after {
