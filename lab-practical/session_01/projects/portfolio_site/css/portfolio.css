@@ -15,7 +15,7 @@
 }
 .portfolio-filters .filter-btn {
   background: transparent;
-  border: 2px solid var(--color-primary);
+  border: 3px solid var(--color-primary);
   padding: 0.5rem 1.5rem;
   border-radius: 25px;
   cursor: pointer;
@@ -31,8 +31,8 @@
 /* portfolio-grid */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 
 .portfolio-item {
@@ -70,15 +70,29 @@
   opacity: 1;
 }
 
-/* tablet */
-@media (max-width: 1023px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 2000;
 }
-/* mobile */
-@media (max-width: 768px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
+/* Show when targeted */
+.lightbox:target {
+  opacity: 1;
+  visibility: visible;
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
 }
