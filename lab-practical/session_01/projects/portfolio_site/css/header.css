@@ -1,0 +1,57 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--color-light);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 24px 0 32px;
+}
+
+.logo {
+  color: var(--color-primary);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+header nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 32px;
+}
+header nav a:hover {
+  color: var(--color-primary);
+}
+
+/* Dùng checkbox hack */
+
+/* Ẩn checkbox */
+.menu-toggle {
+  display: none;
+}
+/* Ẩn hamburger trên desktop */
+.menu-toggle-label {
+  display: none;
+}
+
+/* Hiện hamburger trên mobile */
+@media (max-width: 768px) {
+  /* Ẩn nav mặc định trên mobile */
+  nav {
+    display: none;
+  }
+  /* Hiện hamburger */
+  .menu-toggle-label {
+    display: block;
+  }
+  /* Hiện nav khi check */
+  .menu-toggle:checked ~ nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
