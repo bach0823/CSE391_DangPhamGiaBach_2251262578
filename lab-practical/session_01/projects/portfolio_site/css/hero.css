@@ -5,5 +5,29 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  margin-top: -60px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: white;
+}
+.hero h1 span {
+  color: var(--color-yellow);
+}
+.hero p {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
 }

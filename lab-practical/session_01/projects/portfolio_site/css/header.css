@@ -22,7 +22,7 @@ header nav a {
   color: black;
   font-size: 14px;
   font-weight: 500;
-  margin-left: 32px;
+  padding-left: 32px;
 }
 header nav a:hover {
   color: var(--color-primary);
@@ -41,17 +41,25 @@ header nav a:hover {
 
 /* Hiện hamburger trên mobile */
 @media (max-width: 768px) {
-  /* Ẩn nav mặc định trên mobile */
-  nav {
-    display: none;
-  }
   /* Hiện hamburger */
   .menu-toggle-label {
     display: block;
+    cursor: pointer;
+  }
+  /* Ẩn nav mặc định trên mobile */
+  nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: var(--color-light);
   }
   /* Hiện nav khi check */
   .menu-toggle:checked ~ nav {
     display: flex;
     flex-direction: column;
+    gap: 24px;
+    padding: 24px 0px;
   }
 }
