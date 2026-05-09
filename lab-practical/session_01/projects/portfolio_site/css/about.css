@@ -1,6 +1,6 @@
 #about .container {
   padding: 48px 32px;
-  background: var(--color-light);
+  background: white;
 }
 
 .about-grid {
@@ -22,8 +22,8 @@
 .about-image img {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 1/1;
+  height: 100%;
+  object-fit: cover; /* img sẽ lấp đầy bố*/
 }
 
 /* about-content */

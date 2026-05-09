@@ -5,5 +5,6 @@
   --color-light: #f8fafc; /* Slate light */
   --color-text: #334155; /* Slate text */
   --color-yellow: rgb(251, 191, 36);
+  --color-bar-track: #e2e8f0;
   --font-main: "Segoe UI", sans-serif;
 }
