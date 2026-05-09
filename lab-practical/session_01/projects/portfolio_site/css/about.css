@@ -1,0 +1,30 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background: var(--color-light);
+}
+
+.about-image {
+  border: 6px solid var(--color-primary);
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+  margin: 32px 32px;
+}
+
+.about-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+
+.about-content {
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  #about .container {
+  }
+}
