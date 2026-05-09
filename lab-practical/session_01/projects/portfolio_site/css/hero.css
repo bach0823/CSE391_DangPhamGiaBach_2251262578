@@ -11,23 +11,37 @@
     var(--color-secondary)
   );
   margin-top: -60px;
-}
-
-.hero h1 {
-  font-size: 3.5rem;
   color: white;
 }
-.hero h1 span {
+
+.hero__title {
+  font-size: 3.5rem;
+}
+.hero__title span {
   color: var(--color-yellow);
 }
-.hero p {
+.hero__subtitle {
   font-size: 1.25rem;
+  margin: 36px 0;
+}
+.cta-button {
+  padding: 16px 32px;
+  background: white;
+  border-radius: 45px;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--color-primary);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.275);
+  transition: transform 0.2 ease;
+}
+.cta-button:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.385);
+  transform: scale(1.012);
 }
 
+/* mobile */
 @media (max-width: 768px) {
-  .hero {
-  }
-  .hero h1 {
+  .hero__title {
     font-size: 2.5rem;
   }
 }
