@@ -60,6 +60,15 @@ Ghi lại breakpoints chuẩn (theo tài liệu hoặc Bootstrap). Cho mỗi bre
 - Thiết bị đại diện
 - Ví dụ: lưới sản phẩm nên hiển thị mấy cột?
 
+  | Tên            | Width    | Thiết bị đại diện             | Số cột |
+  | -------------- | -------- | ----------------------------- | ------ |
+  | **Mobile**     | < 576px  | iPhone SE, các điện thoại nhỏ | 1      |
+  | **Mobile L**   | ≥ 576px  | iPhone Plus, điện thoại ngang | 2      |
+  | **Tablet**     | ≥ 768px  | iPad dọc, tablet              | 2      |
+  | **Desktop**    | ≥ 992px  | Laptop nhỏ                    | 2      |
+  | **Desktop L**  | ≥ 1200px | Desktop, laptop lớn           | 3      |
+  | **Desktop XL** | ≥ 1400px | Màn hình 4K, ultrawide        | 4      |
+
 ### Câu A3 (5đ) — Media Queries
 
 Đọc CSS sau, cho biết ở mỗi kích thước màn hình, `.container` có `width` bao nhiêu? Điền bảng.
