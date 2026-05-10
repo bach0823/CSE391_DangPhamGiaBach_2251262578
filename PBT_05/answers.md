@@ -71,43 +71,15 @@ Ghi lại breakpoints chuẩn (theo tài liệu hoặc Bootstrap). Cho mỗi bre
 
 ### Câu A3 (5đ) — Media Queries
 
-Đọc CSS sau, cho biết ở mỗi kích thước màn hình, `.container` có `width` bao nhiêu? Điền bảng.
-
-```css
-.container {
-  width: 100%;
-  padding: 10px;
-}
-
-@media (min-width: 576px) {
-  .container {
-    width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    width: 720px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1140px;
-  }
-}
-```
+Giả định `*{box-sizing: border-box;}`, nếu `box-sizing: content-box;` thì width cộng thêm 20px do tính thêm padding
 
 | Chiều rộng màn hình | `.container` width |
 | ------------------- | ------------------ |
-| 375px (iPhone SE)   | ???                |
-| 600px               | ???                |
-| 800px               | ???                |
-| 1000px              | ???                |
-| 1400px              | ???                |
+| 375px (iPhone SE)   | 375px              |
+| 600px               | 540px              |
+| 800px               | 720px              |
+| 1000px              | 960px              |
+| 1400px              | 1140px             |
 
 ### Câu A4 (5đ) — SCSS Basics
 
