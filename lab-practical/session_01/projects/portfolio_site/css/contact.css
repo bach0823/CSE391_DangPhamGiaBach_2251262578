@@ -81,6 +81,8 @@
   resize: vertical;
   min-height: 120px;
 }
+
+/* submit-btn */
 .submit-btn {
   background: var(--color-primary);
   color: white;
@@ -92,9 +94,23 @@
   transition:
     box-shadow 0.3s ease,
     transform 0.1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.875rem;
 }
 .submit-btn:hover {
   transform: translateY(-1px);
   box-shadow: 0 3px 4px rgba(99, 102, 241, 0.6);
   cursor: pointer;
+}
+.submit-btn span {
+  transform: scaleX(1.5);
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
 }
