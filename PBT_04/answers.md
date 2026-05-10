@@ -100,3 +100,107 @@ Screenshot:
 - Trạng thái sidebar khi scroll (chứng minh sticky)
 - Badge trên card  
   ![](./screenshots/Screenshot_B1.png)
+
+---
+
+## PHẦN C — SUY LUẬN (20 điểm)
+
+### Câu C1 (10đ) — Flexbox vs Grid: Khi nào dùng gì?
+
+Cho 5 tình huống layout thực tế. Với mỗi tình huống, trả lời: dùng **Flexbox**, **Grid**, hay **kết hợp cả hai**? Giải thích ngắn gọn tại sao.
+
+1. Navigation bar ngang (logo + menu + buttons): flexbox, xử lý một chiều
+2. Lưới ảnh Instagram (3 cột đều nhau, số ảnh không biết trước): Grid, vì cần xử lý bố cục theo lưới.
+3. Layout blog: main content + sidebar: Grid, kiểm soát kích cỡ hai cột tốt hơn
+4. Footer với 4 cột thông tin (Về chúng tôi, Liên kết, Hỗ trợ, Liên hệ): Grid, kiểm soát kích cỡ hai cột tốt hơn
+5. Card sản phẩm (ảnh trên, text giữa, nút dưới — nút luôn dính đáy): flexbox, vì chỉ cần xử lý một chiều.
+
+### Câu C2 (10đ) — Debug Flexbox
+
+Layout sau bị lỗi. Mô tả lỗi và sửa.
+
+**Lỗi 1:** Cards không đều chiều cao — nút "Mua" bị nhảy lên/xuống
+
+```css
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  width: 30%;
+  margin: 1.5%;
+}
+.card img {
+  width: 100%;
+}
+.card h3 {
+  font-size: 18px;
+}
+.card .btn {
+  padding: 10px;
+}
+```
+
+Nguyên nhân:.card không có `display: flex` nên các phần tử bên trong không được kiểm soát, nút không dính đáy, ngoài ra nên thêm `margin-top: auto` cho button để button bị đẩy xuống một khoảng bằng toàn bộ không gian thừa, giúp cho button luôn nằm sát dưới  
+Sửa:
+
+```css
+.card {
+  width: 30%;
+  margin: 1.5%;
+  display: flex; /*Thêm*/
+  flex-direction: column; /*sắp xếp theo chiều dọc*/
+}
+.card .btn {
+  padding: 10px;
+  margin-top: auto; /* để btn dính đáy*/
+}
+```
+
+**Lỗi 2:** Muốn items nằm giữa cả ngang lẫn dọc trong container 100vh, nhưng item vẫn dính góc trái trên
+
+```css
+.hero {
+  height: 100vh;
+  display: flex;
+}
+.hero-content {
+  text-align: center;
+}
+```
+
+Nguyên nhân: .hero thiếu thuộc tính `justify-content: center` và `align-items: center` để căn .hero-content ở giữa.  
+Sửa:
+
+```css
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center; /*căn giữa chiều ngang*/
+  align-items: center; /*căn giữa chiều dọc*/
+}
+```
+
+**Lỗi 3:** Sidebar bị co lại khi content quá dài
+
+```css
+.layout {
+  display: flex;
+}
+.sidebar {
+  width: 250px;
+}
+.content {
+  flex: 1;
+}
+```
+
+Nguyên nhân: item bên trong .layout mặc định là `flex-shrink: 1`, `.content` có `flex: 1` nên có thêm `flex-grow: 1` nên khi .content to ra thì .sidebar có xu hướng co lại.  
+Sửa:
+
+```css
+.sidebar {
+  width: 250px;
+  flex-shrink: 0; /*ngăn cho .sidebar co lại*/
+}
+```
