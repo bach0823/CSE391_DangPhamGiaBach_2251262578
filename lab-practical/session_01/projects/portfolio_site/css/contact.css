@@ -65,21 +65,22 @@
     box-shadow 0.3s ease;
 }
 
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* focus effect */
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--color-primary);
   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
 }
-
+/* placeholder */
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: #a9aeb4;
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
 }
 
 /* submit-btn */
