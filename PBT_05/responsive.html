@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Product Page</title>
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#"
+        ><img src="./PBT_04/imgs/logo_B1.svg" alt="logo" id="logo"
+      /></a>
+      <input type="checkbox" class="menu-toggle" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-toggle-label">&#9776;</label>
+      <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#">Tài khoản</a>
+        <a href="#">Hỗ trợ</a>
+        <a href="#">Giỏ hàng</a>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <aside class="sidebar">
+        <fieldset>
+          <legend>
+            <label for="filter-toggle-sort" class="filter-toggle-label"
+              >Sắp xếp theo</label
+            >
+          </legend>
+          <input
+            type="checkbox"
+            class="filter-toggle"
+            id="filter-toggle-sort"
+          />
+          <div class="dropdown-filter">
+            <label><input type="radio" name="sortby" checked /> Nổi bật</label>
+            <label> <input type="radio" name="sortby" /> Bán chạy </label>
+            <label> <input type="radio" name="sortby" /> Mới </label>
+            <label> <input type="radio" name="sortby" /> Giá </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>
+            <label for="filter-toggle-price" class="filter-toggle-label"
+              >Khoảng giá</label
+            >
+          </legend>
+          <input
+            type="checkbox"
+            class="filter-toggle"
+            id="filter-toggle-price"
+          />
+          <div class="dropdown-filter">
+            <label>
+              <input type="radio" name="price" checked /> Dưới 2tr
+            </label>
+            <label> <input type="radio" name="price" /> 2tr - 10tr </label>
+            <label> <input type="radio" name="price" /> Trên 10tr </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>
+            <label for="filter-toggle-brand" class="filter-toggle-label"
+              >Thương hiệu</label
+            >
+          </legend>
+          <input
+            type="checkbox"
+            class="filter-toggle"
+            id="filter-toggle-brand"
+          />
+          <div class="dropdown-filter">
+            <label><input type="checkbox" name="brand" checked /> Tất cả</label>
+            <label> <input type="checkbox" name="brand" /> Esus </label>
+            <label> <input type="checkbox" name="brand" /> Sumsang </label>
+            <label> <input type="checkbox" name="brand" /> Ipple </label>
+            <label> <input type="checkbox" name="brand" /> Sunny </label>
+          </div>
+        </fieldset>
+      </aside>
+      <main class="product-grid">
+        <div class="card">
+          <figure>
+            <img src="./PBT_04/imgs/logo_B1.svg" alt="sanpham 1" />
+          </figure>
+          <section>
+            <h3>Sản phẩm 1</h3>
+            <p>1.000.000 VNĐ</p>
+          </section>
+          <button class="btn__mua" type="button">Mua</button>
+        </div>
+        <div class="card">
+          <figure>
+            <img src="./PBT_04/imgs/logo_B1.svg" alt="sanpham 2" />
+          </figure>
+          <section>
+            <h3>Sản phẩm 2</h3>
+            <p>1.000.000 VNĐ</p>
+          </section>
+          <button class="btn__mua" type="button">Mua</button>
+        </div>
+        <div class="card">
+          <figure>
+            <img src="./PBT_04/imgs/logo_B1.svg" alt="sanpham 3" />
+          </figure>
+          <section>
+            <h3>Sản phẩm 3</h3>
+            <p>1.000.000 VNĐ</p>
+          </section>
+          <button class="btn__mua" type="button">Mua</button>
+        </div>
+        <div class="card">
+          <figure>
+            <img src="./PBT_04/imgs/logo_B1.svg" alt="sanpham 4" />
+          </figure>
+          <section>
+            <h3>Sản phẩm 4</h3>
+            <p>1.000.000 VNĐ</p>
+          </section>
+          <button class="btn__mua" type="button">Mua</button>
+        </div>
+        <div class="card">
+          <figure>
+            <img src="./PBT_04/imgs/logo_B1.svg" alt="sanpham 5" />
+          </figure>
+          <section>
+            <h3>Sản phẩm 5</h3>
+            <p>1.000.000 VNĐ</p>
+          </section>
+          <button class="btn__mua" type="button">Mua</button>
+        </div>
+        <div class="card">
+          <figure>
+            <img src="./PBT_04/imgs/logo_B1.svg" alt="sanpham 6" />
+          </figure>
+          <section>
+            <h3>Sản phẩm 6</h3>
+            <p>1.000.000 VNĐ</p>
+          </section>
+          <button class="btn__mua" type="button">Mua</button>
+        </div>
+        <div class="card">
+          <figure>
+            <img src="./PBT_04/imgs/logo_B1.svg" alt="sanpham 7" />
+          </figure>
+          <section>
+            <h3>Sản phẩm 7</h3>
+            <p>1.000.000 VNĐ</p>
+          </section>
+          <button class="btn__mua" type="button">Mua</button>
+        </div>
+        <div class="card">
+          <figure>
+            <img src="./PBT_04/imgs/logo_B1.svg" alt="sanpham 8" />
+          </figure>
+          <section>
+            <h3>Sản phẩm 8</h3>
+            <p>1.000.000 VNĐ</p>
+          </section>
+          <button class="btn__mua" type="button">Mua</button>
+        </div>
+        <div class="card">
+          <figure>
+            <img src="./PBT_04/imgs/logo_B1.svg" alt="sanpham 9" />
+          </figure>
+          <section>
+            <h3>Sản phẩm 9</h3>
+            <p>1.000.000 VNĐ</p>
+          </section>
+          <button class="btn__mua" type="button">Mua</button>
+        </div>
+      </main>
+      <aside class="ads">
+        <div class="ads-card">
+          <img src="./PBT_04/imgs/logo_B1.svg" alt="ads1" />
+        </div>
+      </aside>
+    </div>
+    <footer><div class="footer-content">&copy; Copyright 2026</div></footer>
+  </body>
+</html>
