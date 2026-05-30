@@ -4,22 +4,19 @@ function Dashboard() {
   const stock = 0;
 
   return (
-    <div>
+    <div style={{ border: "1px solid black" }}>
+      <h4>Bài 2.2</h4>
       {/* Thử thách 1*/}
       <h3>Trạng thái: {isOnline ? "🟢 Đang online" : "🔴 Đang offline"}</h3>
 
-      <hr />
-
       {/* Thử thách 2 */}
       {isLoggedIn && (
-        <ul>
+        <ul style={{ listStyle: "none" }}>
           <li>👤 Thông tin cá nhân</li>
           <li>⚙️ Cài đặt</li>
           <li>🚪 Đăng xuất</li>
         </ul>
       )}
-
-      <hr />
 
       {/* Thử thách 3 */}
       <div>

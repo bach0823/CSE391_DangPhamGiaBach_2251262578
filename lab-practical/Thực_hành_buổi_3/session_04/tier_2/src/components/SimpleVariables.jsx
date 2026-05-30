@@ -11,6 +11,7 @@ function SimpleVariables() {
 
   return (
     <div style={{ padding: "20px" }}>
+      <h4>Bài 2.1</h4>
       <h1>
         Chào buổi {hientai < 12 ? "sáng" : hientai < 18 ? "chiều" : "tối"} ,
         {ten}!
