@@ -1,6 +1,7 @@
 import NumberState from "./components/NumberState";
 import StringState from "./components/StringState";
 import BooleanState from "./components/BooleanState";
+import MultipleStates from "./components/MultipleStates";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <NumberState></NumberState>
       <StringState></StringState>
       <BooleanState></BooleanState>
+      <MultipleStates></MultipleStates>
     </>
   );
 }
