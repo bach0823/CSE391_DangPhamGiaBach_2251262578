@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BS Store - Landing Page</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <style>
+      .carousel-item img {
+        height: 300px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header/Navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+          <a class="navbar-brand fw-bold text-primary" href="#" id="brandLogo">
+            BS Store
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" id="btnToggleNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" id="navLinkHome">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="navLinkProducts">Sản phẩm</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="navLinkContact">Liên hệ</a>
+              </li>
+            </ul>
+            <form class="d-flex me-3" role="search" id="formSearch">
+              <input class="form-control me-2" type="search" placeholder="Tìm kiếm sản phẩm..." aria-label="Search" id="inputSearch" />
+              <button class="btn btn-outline-primary" type="submit" id="btnSearch">Tìm</button>
+            </form>
+            <div class="d-flex">
+              <a href="#" class="btn btn-primary" id="btnCart">
+                <i class="bi bi-cart"></i> Giỏ hàng
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Carousel Section -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="https://tiki.vn/khuyen-mai/66-sale-he-bung-no?itm_campaign=HMP_YPD_TKA_BNA_UNK_ALL_ALL_UNK_UNK_UNK_TMSX.edc862b0-c6ce-4bdb-999c-c26eca9813b8&itm_medium=CPD&itm_source=tiki-ads&tmsx=edc862b0-c6ce-4bdb-999c-c26eca9813b8&waypoint_id=x6tikivip" target="_blank">
+            <img src="https://salt.tikicdn.com/cache/w750/ts/tikimsp/96/6e/0f/24a30f2444e4a60d72050697f326ecf1.png.webp" class="d-block w-100" alt="Banner 1" referrerpolicy="no-referrer" />
+          </a>
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+            <h5>6.6 Sale Hè Bùng Nổ</h5>
+            <p>Săn deal công nghệ cực khủng cùng BS Store.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="https://tiki.vn/khuyen-mai/66-sale-he-bung-no?itm_campaign=HMP_YPD_TKA_BNA_UNK_ALL_ALL_UNK_UNK_UNK_TMSX.edc862b0-c6ce-4bdb-999c-c26eca9813b8&itm_medium=CPD&itm_source=tiki-ads&tmsx=edc862b0-c6ce-4bdb-999c-c26eca9813b8&waypoint_id=x6tikivip" target="_blank">
+            <img src="https://salt.tikicdn.com/cache/w750/ts/tikimsp/c8/61/34/39aeb7c46a611b61452dc1706580f0c4.jpg.webp" class="d-block w-100" alt="Banner 2" referrerpolicy="no-referrer" />
+          </a>
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+            <h5>Siêu Khuyến Mãi Hè</h5>
+            <p>Các sản phẩm công nghệ giảm giá kịch sàn.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="https://tiki.vn/khuyen-mai/66-sale-he-bung-no?itm_campaign=HMP_YPD_TKA_BNA_UNK_ALL_ALL_UNK_UNK_UNK_TMSX.edc862b0-c6ce-4bdb-999c-c26eca9813b8&itm_medium=CPD&itm_source=tiki-ads&tmsx=edc862b0-c6ce-4bdb-999c-c26eca9813b8&waypoint_id=x6tikivip" target="_blank">
+            <img src="https://salt.tikicdn.com/cache/w750/ts/tikimsp/96/6e/0f/24a30f2444e4a60d72050697f326ecf1.png.webp" class="d-block w-100" alt="Banner 3" referrerpolicy="no-referrer" />
+          </a>
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+            <h5>Hỗ Trợ Trả Góp 0%</h5>
+            <p>Mua sắm thả ga không lo về giá.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide-to="prev" id="btnCarouselPrev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide-to="next" id="btnCarouselNext">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="container my-5">
+      <h2 class="text-center mb-4 text-secondary">Sản phẩm bán chạy</h2>
+      
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100 position-relative">
+            <span class="badge bg-danger position-absolute top-0 start-0 m-2" id="badgeSale1">Sale</span>
+            <figure class="m-0 text-center">
+              <img src="https://cdn2.cellphones.com.vn/x/media/catalog/product/t/e/text_ng_n_-_2024-09-23t221452.683.png?_gl=1*9emnne*_gcl_aw*R0NMLjE3NzUxMjQxMTkuQ2owS0NRandwN2pPQmhER0FSSXNBQmU3QzRmNHc4OEdFVnpmb2hsbjd3cTQtX2c4NV8tR2tFbGlZVmV0eDUyU3RJT1VUek9VVmwwNWh2Z2FBakF5RUFMd193Y0I.*_gcl_au*NzQ3ODEzNDIwLjE3NzUwMTcyNzg.*_ga*NTAxMzIzMTQ4LjE3NzUwMTcyNzk.*_ga_QLK8WFHNK9*czE3NzY4NDQ2NDAkbzkkZzEkdDE3NzY4NDQ2NjIkajM4JGwwJGg0OTc3NjEzMDA." class="card-img-top p-3 style-img" alt="Laptop ZenBook" style="max-height: 200px; width: auto;" />
+            </figure>
+            <section class="card-body d-flex flex-column">
+              <h3 class="card-title h6 text-truncate" id="prodTitle1">Laptop ZenBook S14</h3>
+              <p class="card-text text-muted small">ASUS</p>
+              <p class="card-text text-danger fw-bold mt-auto mb-2">35.000.000 VNĐ</p>
+              <button class="btn btn-sm btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Laptop ZenBook S14" data-price="35.000.000 VNĐ" data-img="https://cdn2.cellphones.com.vn/x/media/catalog/product/t/e/text_ng_n_-_2024-09-23t221452.683.png?_gl=1*9emnne*_gcl_aw*R0NMLjE3NzUxMjQxMTkuQ2owS0NRandwN2pPQmhER0FSSXNBQmU3QzRmNHc4OEdFVnpmb2hsbjd3cTQtX2c4NV8tR2tFbGlZVmV0eDUyU3RJT1VUek9VVmwwNWh2Z2FBakF5RUFMd193Y0I.*_gcl_au*NzQ3ODEzNDIwLjE3NzUwMTcyNzg.*_ga*NTAxMzIzMTQ4LjE3NzUwMTcyNzk.*_ga_QLK8WFHNK9*czE3NzY4NDQ2NDAkbzkkZzEkdDE3NzY4NDQ2NjIkajM4JGwwJGg0OTc3NjEzMDA." id="btnQuickView1">Xem nhanh</button>
+            </section>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100 position-relative">
+            <span class="badge bg-danger position-absolute top-0 start-0 m-2" id="badgeSale2">Sale</span>
+            <figure class="m-0 text-center">
+              <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/f/r/frame_379_-_2025-05-30t092847.542.png" class="card-img-top p-3 style-img" alt="Bàn phím cơ Custom" style="max-height: 200px; width: auto;" />
+            </figure>
+            <section class="card-body d-flex flex-column">
+              <h3 class="card-title h6 text-truncate" id="prodTitle2">Bàn phím cơ Custom</h3>
+              <p class="card-text text-muted small">Custom Keyboard</p>
+              <p class="card-text text-danger fw-bold mt-auto mb-2">1.500.000 VNĐ</p>
+              <button class="btn btn-sm btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Bàn phím cơ Custom" data-price="1.500.000 VNĐ" data-img="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/f/r/frame_379_-_2025-05-30t092847.542.png" id="btnQuickView2">Xem nhanh</button>
+            </section>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100 position-relative">
+            <span class="badge bg-danger position-absolute top-0 start-0 m-2" id="badgeSale3">Sale</span>
+            <figure class="m-0 text-center">
+              <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/_/t_i_xu_ng_36__2.png" class="card-img-top p-3 style-img" alt="Chuột Gaming" style="max-height: 200px; width: auto;" />
+            </figure>
+            <section class="card-body d-flex flex-column">
+              <h3 class="card-title h6 text-truncate" id="prodTitle3">Chuột Gaming không dây</h3>
+              <p class="card-text text-muted small">Gaming Mouse</p>
+              <p class="card-text text-danger fw-bold mt-auto mb-2">800.000 VNĐ</p>
+              <button class="btn btn-sm btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Chuột Gaming không dây" data-price="800.000 VNĐ" data-img="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/_/t_i_xu_ng_36__2.png" id="btnQuickView3">Xem nhanh</button>
+            </section>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100 position-relative">
+            <span class="badge bg-danger position-absolute top-0 start-0 m-2" id="badgeSale4">Sale</span>
+            <figure class="m-0 text-center">
+              <img src="https://salt.tikicdn.com/cache/750x750/ts/product/cb/a9/4c/48456b4f0f67bcb75829ed6243b4441f.jpg.webp" class="card-img-top p-3 style-img" alt="iPhone 16 Pro" referrerpolicy="no-referrer" style="max-height: 200px; width: auto;" />
+            </figure>
+            <section class="card-body d-flex flex-column">
+              <h3 class="card-title h6 text-truncate" id="prodTitle4">iPhone 16 Pro</h3>
+              <p class="card-text text-muted small">Apple</p>
+              <p class="card-text text-danger fw-bold mt-auto mb-2">24.990.000 VNĐ</p>
+              <button class="btn btn-sm btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal" data-title="iPhone 16 Pro" data-price="24.990.000 VNĐ" data-img="https://salt.tikicdn.com/cache/750x750/ts/product/cb/a9/4c/48456b4f0f67bcb75829ed6243b4441f.jpg.webp" id="btnQuickView4">Xem nhanh</button>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Quick View Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModalLabel">Xem nhanh sản phẩm</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="btnModalClose"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row align-items-center">
+              <div class="col-md-5 text-center">
+                <img src="" alt="Product Image" class="img-fluid rounded mb-3 mb-md-0" id="modalProductImg" />
+              </div>
+              <div class="col-md-7">
+                <h4 id="modalProductTitle" class="text-primary h5">Tên sản phẩm</h4>
+                <p class="text-danger fw-bold fs-5" id="modalProductPrice">Giá</p>
+                <p class="text-muted small">Bảo hành: 12 tháng chính hãng</p>
+                <p class="small">Sản phẩm công nghệ cao cấp mang lại trải nghiệm làm việc và giải trí tuyệt vời nhất cho người dùng.</p>
+                <button class="btn btn-primary w-100 mt-2" id="btnModalAddToCart"><i class="bi bi-cart-plus"></i> Thêm vào giỏ hàng</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-3">
+            <h5 class="text-uppercase fw-bold text-primary mb-3 h6">BS Store</h5>
+            <p class="small text-muted">Hệ thống bán lẻ sản phẩm công nghệ uy tín và chất lượng hàng đầu Việt Nam.</p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h5 class="text-uppercase fw-bold mb-3 h6">Hỗ trợ khách hàng</h5>
+            <ul class="list-unstyled text-muted small">
+              <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Hướng dẫn mua hàng</a></li>
+              <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Chính sách vận chuyển</a></li>
+              <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Chính sách đổi trả</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h5 class="text-uppercase fw-bold mb-3 h6">Hợp tác</h5>
+            <ul class="list-unstyled text-muted small">
+              <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Đăng ký bán lẻ</a></li>
+              <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Tuyển dụng</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h5 class="text-uppercase fw-bold mb-3 h6">Kết nối</h5>
+            <div class="d-flex gap-3 fs-5">
+              <a href="#" class="text-light" id="footerFbLink"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-light" id="footerYtLink"><i class="bi bi-youtube"></i></a>
+              <a href="#" class="text-light" id="footerIgLink"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr class="my-4 border-secondary" />
+        <div class="text-center small text-muted">&copy; Copyright 2026 BS Store</div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Script to dynamically update modal content based on clicked button
+      const productModal = document.getElementById('productModal');
+      if (productModal) {
+        productModal.addEventListener('show.bs.modal', function (event) {
+          const button = event.relatedTarget;
+          const title = button.getAttribute('data-title');
+          const price = button.getAttribute('data-price');
+          const img = button.getAttribute('data-img');
+
+          const modalTitle = productModal.querySelector('#modalProductTitle');
+          const modalPrice = productModal.querySelector('#modalProductPrice');
+          const modalImg = productModal.querySelector('#modalProductImg');
+
+          modalTitle.textContent = title;
+          modalPrice.textContent = price;
+          modalImg.src = img;
+        });
+      }
+    </script>
+  </body>
+</html>
