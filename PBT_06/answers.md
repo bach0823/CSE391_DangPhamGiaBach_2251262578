@@ -41,3 +41,31 @@
 - `.container`: Có `max-width tự thay đổi theo breakpoint`, căn giữa theo cha. cho nội dung text, form.
 - `.container-fluid`: Luôn `100% width` ở mọi kích thước màn hình. Dùng cho hero/footer/banner.
 - `.container-md`: khi chưa đạt breakpoint md: hoạt động như `.container-fluid`, khi đạt breakpoint md: hoạt động như `.container`.
+
+---
+
+### PHẦN C — PHÂN TÍCH (20 điểm)
+
+#### Câu C1 (10đ) — Tùy biến Bootstrap
+
+**1. Quy trình đổi màu `$primary` sang `#E63946`:**
+* **Công cụ cần:** Node.js (npm) và trình biên dịch `SASS`.
+* **Quy trình:**
+  - Khởi tạo npm, cài `bootstrap` và `sass`.
+  - Tạo file `custom.scss`.
+  - Khai báo `$primary: #E63946;` **trước** dòng `@import "bootstrap/scss/bootstrap";` (do Bootstrap sử dụng `!default` nên phải khai báo trước để ghi đè).
+  - Biên dịch file `.scss` thành `.css` rồi link file CSS đó vào HTML.
+
+**2. Tại sao nên dùng SASS variables thay vì override CSS trực tiếp:**
+- Màu `$primary` liên quan đến rất nhiều class khác (button hover/active state, outline buttons, `.text-primary`, `.bg-primary`, `.border-primary`, link, badge, focus ring của form...).
+- Override trực tiếp bằng CSS sẽ rất tốn công viết đè thủ công từng class, dễ bị sót và không đồng bộ. Dùng SASS variable sẽ tự động cập nhật đồng bộ cho toàn bộ hệ thống.
+
+---
+
+#### Câu C2 (10đ) — So sánh (với CSS thuần đã làm ở PBT trước)
+
+- **Số dòng CSS cần viết:** CSS thuần mất khoảng 80 - 100 dòng (cho flexbox, media queries, hover, checkbox hack navbar). Bootstrap mất 0 dòng.
+- **Thời gian phát triển:** CSS thuần mất 1 - 2 tiếng để viết và test responsive. Bootstrap chỉ mất 5 - 10 phút để ghép class vào HTML.
+- **Khả năng tùy biến:** CSS thuần tùy biến tự do 100%. Bootstrap khó tùy biến sâu nếu dùng CDN (dễ bị đụng style mặc định), nhưng rất dễ nếu dùng SASS.
+- **Khi nào NÊN dùng:** Các dự án cần làm nhanh (MVP, admin dashboard, landing page), hoặc khi làm việc nhóm cần chuẩn chung để dễ bảo trì.
+- **Khi nào KHÔNG NÊN dùng:** Các trang web có thiết kế độc lạ hoàn toàn, ứng dụng cần tối ưu hiệu năng/dung lượng tải trang tối đa, hoặc khi đang học CSS căn bản.
