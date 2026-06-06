@@ -222,3 +222,7 @@ for (let i = 0; i < 5; i++) {
     }, 1000);
 }
 ```
+
+
+### Câu C2 (10đ) — Bài toán thực tế
+[Bài làm ở đây](./restaurant_bill.js)
