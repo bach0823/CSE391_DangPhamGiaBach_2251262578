@@ -112,3 +112,53 @@ Dự đoán output:
 
 Giải thích spread gotcha:
 - Toán tử spread chỉ sao chép nông (shallow copy). Nó sao chép tham chiếu của object specs chứ không nhân bản specs thành object mới. Nên khi sửa thuộc tính specs của copy thì specs của product gốc cũng thay đổi theo.
+
+---
+
+## PHẦN C — SUY LUẬN (20 điểm)
+
+### Câu C1 (10đ) — Refactor Code
+
+```javascript
+function processOrders(orders) {
+    return orders
+        .filter(o => o.status === "completed" && o.total > 100000)
+        .map(({ id, customer, total }) => {
+            const discount = total * 0.1;
+            return { id, customer, total, discount, finalTotal: total - discount };
+        })
+        .sort((a, b) => b.finalTotal - a.finalTotal);
+}
+```
+
+### Câu C2 (10đ) — Thiết kế API  
+
+```javascript
+const miniArray = {
+    map(arr, fn) {
+        const result = [];
+        for (let i = 0; i < arr.length; i++) {
+            result.push(fn(arr[i], i, arr));
+        }
+        return result;
+    },
+    filter(arr, fn) {
+        const result = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (fn(arr[i], i, arr)) {
+                result.push(arr[i]);
+            }
+        }
+        return result;
+    },
+    reduce(arr, fn, initialValue) {
+        let hasInitial = initialValue !== undefined;
+        let acc = hasInitial ? initialValue : arr[0];
+        let startIdx = hasInitial ? 0 : 1;
+        for (let i = startIdx; i < arr.length; i++) {
+            acc = fn(acc, arr[i], i, arr);
+        }
+        return acc;
+    }
+};
+```
