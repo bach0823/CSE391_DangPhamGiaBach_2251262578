@@ -204,3 +204,7 @@ Sửa:
   flex-shrink: 0; /*ngăn cho .sidebar co lại*/
 }
 ```
+
+## 🎬 PHẦN D — VIDEO THỰC HÀNH OBS (25 điểm)
+
+https://youtu.be/Oic1Hu2ELFs
