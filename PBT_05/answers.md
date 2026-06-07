@@ -172,3 +172,7 @@ Tại sao trình duyệt KHÔNG đọc được file `.scss`? Cần bước gì 
 
 - Vì trình duyệt chỉ được lập trình để hiểu `.css`.
 - Để chuyển sang CSS: VS Code + Live Sass Compiler extension → Click "Watch Sass" ở status bar → Tự compile mỗi khi save
+
+## 🎬 PHẦN D — VIDEO THỰC HÀNH OBS (25 điểm)
+
+https://youtu.be/evtwlE0iyfk
