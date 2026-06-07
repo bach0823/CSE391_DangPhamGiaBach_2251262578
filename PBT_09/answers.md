@@ -197,3 +197,7 @@ document.body.appendChild(fragment);
 Giải thích:
 - Với đoạn code cũ, mỗi lần gọi appendChild trực tiếp vào document.body là một lần trình duyệt phải tính toán lại kích thước, vị trí các phần tử trên trang (gây ra 1000 lần reflow và vẽ lại màn hình repaint), làm CPU bị quá tải và chậm đi rõ rệt.
 - Với đoạn code mới, ta gom hết 1000 thẻ div vào DocumentFragment (đóng vai trò là một DOM ảo nằm tạm thời trong bộ nhớ cache). Khi gán fragment này vào document.body ở dòng cuối cùng, trình duyệt chỉ phải thực hiện tính toán layout và vẽ lại màn hình đúng 1 lần duy nhất cho toàn bộ danh sách, giúp tăng tốc độ xử lý lên rất nhiều.
+
+## 🎬 PHẦN D — VIDEO THỰC HÀNH OBS (25 điểm)  
+
+https://youtu.be/iHC2Cuh2U3s
