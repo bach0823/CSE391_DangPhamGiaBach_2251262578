@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <style>
+        .dashboard { display: flex; gap: 10px; margin-top: 10px; }
+        .widget { border: 1px solid black; padding: 10px; flex: 1; min-height: 100px; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+
+    <h2>Mini Dashboard</h2>
+    <button onclick="loadDashboard()">Refresh All</button>
+    <span id="global-loading" style="display:none; color:blue;"> Loading...</span>
+    <p id="timer"></p>
+
+    <div class="dashboard">
+        <div class="widget" id="w-0"><h3>Weather</h3><div class="content"></div></div>
+        <div class="widget" id="w-1"><h3>Country</h3><div class="content"></div></div>
+        <div class="widget" id="w-2"><h3>Users</h3><div class="content"></div></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
