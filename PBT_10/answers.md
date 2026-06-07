@@ -72,3 +72,42 @@ Trả lời câu hỏi:
 4. `try...catch` — Catch những lỗi gì? (Network error? 404? JSON parse error?)
 - Bắt được các lỗi: lỗi mạng (network error không kết nối được), lỗi throw thủ công khi !response.ok (ví dụ lỗi 404, 500 do code chủ động ném ra), và lỗi cú pháp JSON (JSON parse error khi phản hồi không đúng cấu trúc JSON).
 
+
+---
+
+### Câu A3 (5đ) — Promise States
+
+Vẽ sơ đồ 3 trạng thái của Promise (`Pending → Fulfilled`, `Pending → Rejected`).
+
+Giải thích: Callback Hell là gì? Viết ví dụ 4 cấp callback hell → Refactor thành async/await.
+
+1. Sơ đồ 3 trạng thái của Promise:
+- Pending -> Fulfilled (Thành công) hoặc Rejected (Thất bại)
+
+2. Trả lời:
+- Callback Hell: Là việc lồng quá nhiều hàm callback vào nhau khiến code bị thụt lề sâu, rất khó đọc và khó sửa lỗi.
+- Ví dụ 4 cấp:
+```javascript
+a(function() {
+    b(function() {
+        c(function() {
+            d(function() {
+                console.log("xong");
+            });
+        });
+    });
+});
+```
+- Refactor thành async/await:
+```javascript
+async function chay() {
+    try {
+        await a();
+        await b();
+        await c();
+        await d();
+    } catch (e) {
+        console.log(e);
+    }
+}
+```
