@@ -226,3 +226,7 @@ for (let i = 0; i < 5; i++) {
 
 ### Câu C2 (10đ) — Bài toán thực tế
 [Bài làm ở đây](./restaurant_bill.js)
+
+## 🎬 PHẦN D — VIDEO THỰC HÀNH OBS (25 điểm)
+
+https://youtu.be/lKRO0ZmLhKM
