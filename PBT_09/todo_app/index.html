@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>To do List</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="todo-container">
+        <h3>To do List</h3>
+        
+        <form id="todoForm">
+            <input type="text" id="todoInput" placeholder="Việc cần làm tiếp theo...">
+            <button type="submit">Thêm</button>
+        </form>
+
+        <ul id="todoList"></ul>
+
+        <div class="footer">
+            <span id="todoCount">0 việc chưa xong</span>
+            <div class="filters">
+                <button id="filterAll" class="active-filter">Tất cả</button>
+                <button id="filterActive">Chưa xong</button>
+                <button id="filterCompleted">Đã xong</button>
+            </div>
+            <button id="clearCompleted">Xóa việc đã xong</button>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

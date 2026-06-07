@@ -59,3 +59,21 @@ const userInput = document.querySelector("#search").value;
 document.querySelector("#result").textContent = userInput;
 ```
 
+### Câu A3 (5đ) — Event Bubbling
+
+Dự đoán thứ tự console.log:
+
+Khi click vào button:
+Output:
+```text
+BUTTON
+INNER
+OUTER
+```
+
+Nếu uncomment `e.stopPropagation()`, output thay đổi thế nào:
+Output:
+```text
+BUTTON
+```
+(Vì stopPropagation() ngăn chặn sự kiện nổi bọt lên các lớp cha của nút).
