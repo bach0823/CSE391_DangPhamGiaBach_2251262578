@@ -157,3 +157,43 @@ window.addEventListener("load", () => {
 });
 ```
 
+
+---
+
+### Câu C2 (7đ) — Performance
+
+1. Giải thích: Tại sao bind event lên 1000 elements riêng lẻ là **BAD PRACTICE**? Event Delegation giải quyết thế nào?
+
+- Tại sao bind event lên 1000 elements là BAD PRACTICE:
+  + Tốn bộ nhớ: Trình duyệt phải tạo ra và lưu trữ 1000 event listener riêng biệt trong bộ nhớ RAM. Nếu số lượng phần tử tăng lên nhiều hơn, trang web sẽ bị chậm và lag do tiêu tốn tài nguyên.
+  + Khó quản lý khi thay đổi DOM: Khi thêm phần tử mới hoặc vẽ lại giao diện (render), ta lại phải viết code gán lại sự kiện cho các phần tử mới tạo, rất dễ gây ra lỗi nếu quên.
+
+- Event Delegation giải quyết thế nào:
+  + Thay vì gán sự kiện cho từng thẻ con, ta chỉ gán đúng 1 sự kiện duy nhất lên thẻ cha lớn nhất (ví dụ ul, ol hoặc thẻ div bao ngoài).
+  + Nhờ cơ chế nổi bọt (Event Bubbling) của trình duyệt, khi người dùng click vào bất kỳ thẻ con nào, sự kiện sẽ tự động nổi bọt truyền lên thẻ cha.
+  + Tại thẻ cha, ta chỉ cần sử dụng đối tượng sự kiện (e.g., e.target) để kiểm tra xem thẻ con nào vừa được click và xử lý hành động tương ứng. Cách này tiết kiệm bộ nhớ và không sợ bị mất sự kiện khi render lại danh sách.
+
+2. Cho code:
+```javascript
+for (let i = 0; i < 1000; i++) {
+    const div = document.createElement("div");
+    div.textContent = `Item ${i}`;
+    document.body.appendChild(div);   // ← 1000 lần reflow!
+}
+```
+Refactor dùng **DocumentFragment** để chỉ gây 1 lần reflow. Giải thích tại sao nhanh hơn.
+
+Code refactor:
+```javascript
+const fragment = document.createDocumentFragment();
+for (let i = 0; i < 1000; i++) {
+    const div = document.createElement("div");
+    div.textContent = `Item ${i}`;
+    fragment.appendChild(div);
+}
+document.body.appendChild(fragment);
+```
+
+Giải thích:
+- Với đoạn code cũ, mỗi lần gọi appendChild trực tiếp vào document.body là một lần trình duyệt phải tính toán lại kích thước, vị trí các phần tử trên trang (gây ra 1000 lần reflow và vẽ lại màn hình repaint), làm CPU bị quá tải và chậm đi rõ rệt.
+- Với đoạn code mới, ta gom hết 1000 thẻ div vào DocumentFragment (đóng vai trò là một DOM ảo nằm tạm thời trong bộ nhớ cache). Khi gán fragment này vào document.body ở dòng cuối cùng, trình duyệt chỉ phải thực hiện tính toán layout và vẽ lại màn hình đúng 1 lần duy nhất cho toàn bộ danh sách, giúp tăng tốc độ xử lý lên rất nhiều.
