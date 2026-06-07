@@ -77,3 +77,83 @@ Output:
 BUTTON
 ```
 (Vì stopPropagation() ngăn chặn sự kiện nổi bọt lên các lớp cha của nút).
+
+---
+
+## PHẦN C — DEBUG & PHÂN TÍCH (15 điểm)
+
+### Câu C1 (8đ) — Debug DOM Code
+
+Các lỗi tìm thấy trong đoạn code và cách khắc phục:
+
+1. Lỗi sự kiện click ở nút decrementBtn: Dòng `addEventListener("onclick", ...)` dùng sai tên sự kiện `"onclick"`. Khi đăng ký sự kiện bằng addEventListener thì bỏ tiền tố "on". Sửa thành `"click"`.
+2. Lỗi gán đè biến hằng số countDisplay ở nút resetBtn: Dòng `countDisplay = count;` cố tình gán lại giá trị cho hằng số countDisplay dẫn đến lỗi trình duyệt. Sửa thành `countDisplay.innerHTML = count;`.
+3. Dùng sai giá trị null cho innerHTML ở nút resetBtn: Dòng `historyList.innerHTML = null;` không đúng chuẩn gán giá trị HTML. Sửa thành chuỗi rỗng `historyList.innerHTML = "";`.
+4. Gọi phương thức remove không có dấu ngoặc ở nút clearHistory: Dòng `item.remove;` chỉ tham chiếu đến hàm chứ không thực thi. Sửa thành `item.remove();`.
+5. Ép sai kiểu dữ liệu khi lấy count từ localStorage: Dòng `count = localStorage.getItem("count");` gán chuỗi hoặc null cho biến count, làm sai phép tính cộng trừ tiếp theo. Sửa thành `count = parseInt(localStorage.getItem("count")) || 0;`.
+6. Mất sự kiện click của các thẻ li khi khôi phục từ localStorage: Đoạn code cũ gán sự kiện click trực tiếp cho từng thẻ li lúc tạo ra. Khi tải lại trang, historyList được khôi phục trực tiếp qua innerHTML nên toàn bộ sự kiện click trên các thẻ li cũ bị biến mất. Khắc phục bằng cách dùng Event Delegation gắn sự kiện click cho thẻ cha historyList.
+7. Thiếu khôi phục lịch sử khi load trang: Sự kiện load chỉ khôi phục count hiển thị lên giao diện nhưng bỏ qua lịch sử historyList. Cần thêm dòng khôi phục innerHTML cho historyList.
+
+Code hoàn chỉnh sau khi sửa:
+
+```javascript
+// App: Counter with history
+const countDisplay = document.querySelector(".count");
+const historyList = document.getElementById("history");
+
+let count = 0;
+
+// Dung event delegation cho the cha de tranh mat su kien khi load tu localStorage
+historyList.addEventListener("click", function(e) {
+    if (e.target.tagName === "LI") {
+        deleteHistory(e.target);
+    }
+});
+
+document.querySelector("#incrementBtn").addEventListener("click", function() {
+    count++;
+    countDisplay.innerHTML = count;
+    
+    // Luu history
+    const li = document.createElement("li");
+    li.textContent = "Count changed to " + count;
+    historyList.append(li);
+});
+
+document.querySelector("#decrementBtn").addEventListener("click", function() {
+    count--;
+    countDisplay.innerHTML = count;
+});
+
+document.querySelector("#resetBtn").addEventListener("click", () => {
+    count = 0;
+    countDisplay.innerHTML = count;
+    historyList.innerHTML = "";
+});
+
+function deleteHistory(element) {
+    element.parentNode.removeChild(element);
+}
+
+// Clear all history
+document.querySelector("#clearHistory").addEventListener("click", () => {
+    const items = historyList.querySelectorAll("li");
+    items.forEach(item => {
+        item.remove();
+    });
+});
+
+// Save to localStorage
+window.addEventListener("beforeunload", () => {
+    localStorage.setItem("count", count);
+    localStorage.setItem("history", historyList.innerHTML);
+});
+
+// Load from localStorage
+window.addEventListener("load", () => {
+    count = parseInt(localStorage.getItem("count")) || 0;
+    countDisplay.textContent = count;
+    historyList.innerHTML = localStorage.getItem("history") || "";
+});
+```
+
