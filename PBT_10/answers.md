@@ -251,3 +251,7 @@ const res = await Promise.any([
   fetch("https://cdn3.example.com/img/abc.jpg"),
 ]);
 ```
+
+## 🎬 PHẦN D — VIDEO THỰC HÀNH OBS (25 điểm)
+
+https://youtu.be/zvDVZlFVVA4
