@@ -162,3 +162,6 @@ const miniArray = {
     }
 };
 ```
+## 🎬 PHẦN D — VIDEO THỰC HÀNH OBS (25 điểm)
+
+https://youtu.be/GWf_xRelVYs
