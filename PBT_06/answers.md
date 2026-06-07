@@ -69,3 +69,7 @@
 - **Khả năng tùy biến:** CSS thuần tùy biến tự do 100%. Bootstrap khó tùy biến sâu nếu dùng CDN (dễ bị đụng style mặc định), nhưng rất dễ nếu dùng SASS.
 - **Khi nào NÊN dùng:** Các dự án cần làm nhanh (MVP, admin dashboard, landing page), hoặc khi làm việc nhóm cần chuẩn chung để dễ bảo trì.
 - **Khi nào KHÔNG NÊN dùng:** Các trang web có thiết kế độc lạ hoàn toàn, ứng dụng cần tối ưu hiệu năng/dung lượng tải trang tối đa, hoặc khi đang học CSS căn bản.
+
+## 🎬 PHẦN D — VIDEO THỰC HÀNH OBS (25 điểm)
+
+https://youtu.be/ujyAfsbnOC8
